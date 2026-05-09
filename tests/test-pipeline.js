@@ -1,6 +1,6 @@
 import readline from 'readline';
-import { extractConditions } from "./src/services/llmService.js";
-import { searchRestaurants } from "./src/services/hotpepperService.js";
+import { extractConditions } from "../src/services/llmService.js";
+import { searchRestaurants } from "../src/services/hotpepperService.js";
 
 const rl = readline.createInterface({
   input: process.stdin,

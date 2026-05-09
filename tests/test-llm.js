@@ -1,4 +1,4 @@
-import { extractConditions } from "./src/services/llmService.js";
+import { extractConditions } from "../src/services/llmService.js";
 
 async function main() {
   const prompt = "今日サークル終わりに20人で入れる安い居酒屋を探して。時間は19時から。";

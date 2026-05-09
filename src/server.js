@@ -2,8 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { extractConditions } from './src/services/llmService.js';
-import { searchRestaurants } from './src/services/hotpepperService.js';
+import { extractConditions } from './services/llmService.js';
+import { searchRestaurants } from './services/hotpepperService.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,7 +16,7 @@ app.use(cors()); // フロントエンドからのリクエストを許可
 app.use(express.json()); // JSON形式のリクエストボディをパース
 
 // フロントエンド（publicディレクトリ）の静的ファイルを配信
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 // 検索APIエンドポイント
 app.post('/api/search', async (req, res) => {
