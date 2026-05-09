@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Restaurant Search</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 角が丸く優しい印象のフォント Nunito を読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <h1>🍽️ MoguMogu AI</h1>
+        </header>
+
+        <!-- Main Content Area -->
+        <main>
+            <!-- Search Section -->
+            <section id="search-section" class="active">
+                <div class="search-container">
+                    <h2>今日はどんな気分ですか？</h2>
+                    <p class="subtitle">AIがあなたの要望にピッタリのお店を見つけます。</p>
+                    <textarea id="prompt-input" placeholder="例: 大学の友達と4人で打ち上げ！安くて美味しくて、おしゃれなイタリアンを探して！" rows="4"></textarea>
+                    <button id="search-button">
+                        <span class="btn-text">お店を探す</span>
+                        <span class="loading-spinner hidden"></span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="hidden">
+                <div class="results-header">
+                    <h2>✨ おすすめのレストラン</h2>
+                    <button id="back-button" class="secondary-btn">← 検索に戻る</button>
+                </div>
+                
+                <!-- 比較しやすいタブ表示領域 -->
+                <div class="tabs-container">
+                    <div id="tabs" class="tabs"></div>
+                </div>
+
+                <!-- 比較しやすい横スクロールカード表示領域 -->
+                <div id="cards-container" class="cards-container">
+                    <!-- Javascriptで動的にカードが挿入されます -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
