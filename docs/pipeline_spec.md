@@ -48,27 +48,36 @@ graph TD
   "status": "success",
   "data": {
     "parsed_conditions": {
+      "location": "新宿",
       "people": 20,
-      "time": "19:00",
-      "date": "今日",
-      "keywords": ["安い", "居酒屋", "サークル終わり"]
+      "private_room": false,
+      "genre": "居酒屋",
+      "time": "19時",
+      "date": "今日"
     },
     "restaurants": [
       {
         "id": "123456",
         "name": "大衆居酒屋 学生の味方",
         "address": "東京都...",
-        "rating": 4.2, // ※注意: ホットペッパーAPIでは評価値は取得できないため、モック値または非表示とする
+        "rating": 4.2, // ※注意: モック値 (3.5 ~ 4.8)
+        "photo_url": "https://imgfp.hotp.jp/IMGH/.../xxx.jpg",
+        "urls": {
+          "pc": "https://www.hotpepper.jp/strJxxx/"
+        },
         "availability": {
           "can_reserve": true,
           "status": "○ (空きあり)"
         },
         "info": {
-          "budget": "2000円〜3000円",
+          "access": "新宿駅徒歩5分",
+          "open_hours": "月～日: 17:00～翌0:00",
+          "budget": "2001～3000円",
           "capacity": 50,
-          "features": ["大人数歓迎", "学生向けコースあり"]
-        },
-        "menu_summary": "焼き鳥盛り合わせ 500円, 飲み放題 1000円..." // ボーナス実装
+          "free_drink": "あり",
+          "private_room": "あり",
+          "features": ["居酒屋", "大人数歓迎"]
+        }
       }
     ]
   }
